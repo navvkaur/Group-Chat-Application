@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   
+    
+    <title>Group chat</title>
+</head>
+<body >
+<style>
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(48, 2, 32); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(48, 2, 32); 
+}
+.vl {
+  border-left: 6px  solid rgb(66, 3, 61);
+ 
+  height: 500px;
+}
+    body{ 
+        padding: 0%;
+        margin: 0%;
+        
+       overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .gradient-custom {
+/* fallback for old browsers */
+background: #0f0f0f;
+
+/* Chrome 10-25, Safari 5.1-6 */
+
+
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: linear-gradient(to bottom right, rgb(0, 0, 0), rgba(213, 126, 235, 1))
+}
+
+.mask-custom {
+background: rgba(24, 24, 16, .2);
+border-radius: 2em;
+backdrop-filter: blur(15px);
+
+border: 2px solid rgba(255, 255, 255, 0.05);
+background-clip: padding-box;
+box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+#message{
+    overflow-y: scroll;
+   font-size: small;
+   height: 90%;
+
+}
+.scroll{
+width : 3px;
+}
+
+
+</style>
+<div class="dashboard-header">
+  <nav class="navbar navbar-expand-lg  fixed-top" style="background-color: rgb(71, 3, 66);">
+    <a class="navbar-brand" href="#"  style="font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">WECHAT!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+       <div    style="margin-left: 1100px;">
+      <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://img.icons8.com/dusk/100/000000/user-female-circle.png" alt="" class="user-avatar-md rounded-circle" width="40"></a>
+      <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2" style="background-color: rgba(68, 4, 54, 0.514);">
+          <div class="nav-user-info"  >
+              <h5 class="mb-0 text-white nav-user-name"  id = 'pro_name'  style="text-align: center;"></h5>
+              <span class="status"></span><span class="ml-2" style="color: white;"> 🟢 Online</span>
+          </div>
+          <a class="dropdown-item" href="/Html/EditProfile.html"><i class="fas fa-user mr-2"  ></i>Account</a>
+          <a class="dropdown-item" href="/Html/Profile.html" style="color: rgb(2, 2, 2);"><i class="fas fa-cog mr-2" ></i>Menu</a>
+          <a class="dropdown-item" href="/Html/login.html"><i class="fas fa-power-off mr-2"  ></i>Logout</a>
+      </div>
+    </div> 
+    </nav>
+</div>
+    <section class="gradient-custom" style="padding-top: 50px;  height: 800px;">
+        <div class="container-md"  >
+      
+          <div class="row">
+      
+            <div class="col-md-6 col-lg-5 col-xl-5 mb-4 mb-md-0" style="padding-top: 50px;">
+      
+              <h5 class="font-weight-bold mb-3 text-center text-white">Friends</h5>
+      
+              <div class="card mask-custom">
+                <div class="card-body">
+               
+                  <ul class="list-unstyled mb-0" id = 'members'>
+                  
+                  </ul>
+      
+                </div>
+              </div>
+      
+            </div>
+           
+      
+            <div class="col-md-12 col-lg-7 col-xl-7" style="padding-top: 30px; height: 600px; ">
+              
+              <ul class="list-unstyled text-white" id = 'message'>
+                 
+              </ul>
+              <div class="panel-footer">
+                <form action="" id="chat-form">
+                <div class="input-group">
+                    <input id="text" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." />
+                    <span class="input-group-btn">
+                    <button class="form-control" id="btn-chat" style="background-color: rgb(66, 5, 66); color: white;" onclick="sendmessage()">Send</button>
+                    </span>
+
+                </div>
+              </form>
+            </div>
+              
+            </div>
+           
+               
+          
+          </div>
+      
+        </div>
+      </section>
+<!-- <script src = '/Frontend/Javascript/group_chat.js'></script> -->
+<script src = '/Javascript/group_message.js  '></script>
+<script src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js'></script>
+</body>
+</html>

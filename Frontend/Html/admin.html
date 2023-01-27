@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <style>
+        body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+    background-image: url(https://images.pexels.com/photos/669996/pexels-photo-669996.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	font-size: smaller;
+   
+}
+</style>
+<nav class="navbar navbar-expand-lg  fixed-top" style="background-color: rgb(71, 3, 66);">
+  <a class="navbar-brand" href="#"  style="font-weight: bold;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">WECHAT!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+     <div    style="margin-left: 1100px;">
+    <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://img.icons8.com/dusk/100/000000/user-female-circle.png" alt="" class="user-avatar-md rounded-circle" width="40"></a>
+    <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2" style="background-color: rgba(68, 4, 54, 0.514);">
+        <div class="nav-user-info"  >
+            <h5 class="mb-0 text-white nav-user-name"  id = 'pro_name'  style="text-align: center;"></h5>
+            <span class="status"></span><span class="ml-2" style="color: white;"> 🟢 Online</span>
+        </div>
+        <a class="dropdown-item" href="/Html/EditProfile.html" style="color: rgb(0, 0, 0);"><i class="fas fa-user mr-2"  ></i>Account</a>
+        <a class="dropdown-item" href="/Html/Profile.html" style="color: rgb(2, 2, 2);"><i class="fas fa-cog mr-2" ></i>Menu</a>
+        <a class="dropdown-item" href="/Html/login.html" style="color: rgb(7, 5, 5);"><i class="fas fa-power-off mr-2"  ></i>Logout</a>
+    </div>
+  </div> 
+  </nav>
+<div class ="row" >
+    <div class="col-md-6 mx-auto p-0">
+        <div class="card">
+<div class="login-box" style="background-color: black; backface-visibility: visible;">
+   
+    <div id="add-friend" class="container d-flex justify-content-center" style="padding-top: 100px;">
+      <div>
+        <div class="text-center fs-2 mb-5" style="color: white ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Add Friend</div>
+        <table class="table" id="admin-add-friend" style="color: white; font-size: medium;"></table>
+      </div>
+    </div>
+    <!-- Remove Friend -->
+    <div id="add-friend" class="container d-flex justify-content-center" style="color: white ; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+      <div>
+        <div class="text-center fs-2 mb-5"   style="color: white; font-size: medium;">Remove Friend</div>
+        <table class="table" id="admin-remove-friend" style="color: white; font-size: medium;" ></table>
+      </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src = '/Javascript/admin.js'></script>
+    
+  </body>
+</html>

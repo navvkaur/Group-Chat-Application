@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <link rel = 'stylesheet'  href="/Css/login_style.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class ="row" style="margin-left: 400px;">
+        <div class="col-md-6 mx-auto p-0">
+            <div class="card">
+    <div class="login-box">
+        <div class="login-snip">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+            <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+            <div class="login-space">
+                <div class="login">
+                    <div class="group">
+                        <label for="user" class="label">Email</label>
+                        <br>
+                        <input id="email" type="email" class="input"  placeholder="Enter your username"  required>
+                    </div>
+                    <br>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <br>
+                        <input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password" required>
+                    </div>
+                    <br>
+                    <div class="group">
+                        <input id="check" type="checkbox" class="check" checked>
+                        <label for="check"><span class="icon"></span> Keep me Signed in</label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In" onclick="login(event)">
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot">
+                        
+                          <button id = 'myBtn' class="button" style="background-color: rgb(0,0,0,0.5); color: wheat; font-family:Georgia, 'Times New Roman', Times, serif; font-size: medium;">  <a href="#">Forgot Password?</a></button>
+                         
+                    </div>
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content"  >
+                          <span class="close">&times;</span>
+                          <label for="user" class="label">Email Enter your email address and we'll send you an email with instructions to reset your password.</label>
+                         <br>
+                         <br>
+                          <div class="group">
+                            <label for="user" class="label">Email</label>
+                           
+                            <input id="email_fp" type="email" class="input"  placeholder="Enter your email"  required>
+                        </div>
+                        <div class="group" id = 'div_reset'>
+                            <input  id = 'reset' type="submit" class="button" value="Reset Password" onclick="forgotpassword(event)">
+                        </div>
+		
+		
+                    </div>
+                        </div>
+                         
+                        </div>
+                      
+                     
+               
+                <div class="sign-up-form">
+                    <div class="group">
+                        <label for="user" class="label">Username</label>
+                        <input id="name" type="text" class="input" placeholder="Enter your Username" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="password" type="password" class="input" data-type="password" placeholder="Create your password" required>
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Phone Number</label>
+                        <input id="phn" type="number" class="input" data-type="number" placeholder="Enter your Phone number" required >
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Email Address</label>
+                        <input id="username" type="email" class="input" placeholder="Enter your email address" required>
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up" onclick = 'signup(event)'>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="foot">
+                        <label for="tab-1">Already Member?</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>   
+    </div>
+    </div>
+    </div>
+    <script src = '/Javascript/forgotpassword.js'></script>
+       
+        
+    <script src = '/Javascript/login.js'></script>
+    <script src = 'https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js'></script>
+</body>
+</html>
